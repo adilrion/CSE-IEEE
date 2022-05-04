@@ -1,7 +1,9 @@
+import Navigation from "./Components/Shared/Navigation/Navigation";
+
 function App() {
   return (
     <div>
-      <h1>React app</h1>
+      <Navigation />
     </div>
   );
 }
