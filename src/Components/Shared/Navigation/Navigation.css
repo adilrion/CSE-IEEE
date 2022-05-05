@@ -1,3 +1,20 @@
-.nav-c {
-  width: max-content;
+.nav-item-name {
+  padding: 20px 20px;
+  font-weight: 500;
+  color: rgb(86, 86, 86);
+  transition: 0.5s;
+}
+/* .nav-dropdown-menu:hover .nav-item-name {
+  transform: scale(1.1);
+} */
+.nav-dropdown {
+  position: relative;
+}
+.nav-dropdown-menu {
+  position: absolute;
+  display: none;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+  display: block;
 }
