@@ -52,12 +52,12 @@ const Navigation = () => {
             </div>
             {/* For medium and plus sized devices */}
             <ul className="hidden md:flex flex-auto justify-center">
-              <li className="focus:outline-none nav-item-name">Collections</li>
+              <li className="focus:outline-none nav-item-name">Home</li>
               <li className="focus:outline-none nav-dropdown ">
                 <button className="inline-flex justify-between items-center  nav-item-name">
-                  <span>Solutions</span>
+                  <span>Members</span>
                   <ChevronDownIcon
-                    className="ml-2 h-5 w-5 group-hover:text-gray-500"
+                    className="ml-1 h-5 w-5 group-hover:text-gray-500"
                     aria-hidden="true"
                   />
                 </button>
@@ -79,10 +79,10 @@ const Navigation = () => {
                   </div>
                 </div>
               </li>
-              <li className="focus:outline-none nav-item-name">Space</li>
-              <li className="focus:outline-none nav-item-name">Game</li>
-              <li className="focus:outline-none nav-item-name">Utility</li>
-              <li className="focus:outline-none nav-item-name">Cards</li>
+              <li className="focus:outline-none nav-item-name">News</li>
+              <li className="focus:outline-none nav-item-name">Events</li>
+              <li className="focus:outline-none nav-item-name">About</li>
+              <li className="focus:outline-none nav-item-name">Contact</li>
             </ul>
             <div className=" flex space-x-5 justify-center items-center pl-2">
               <div className="relative cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 ">
@@ -169,26 +169,21 @@ const Navigation = () => {
               id="list"
               className={`${
                 dropDown ? "hidden" : "block"
-              } font-normal text-base leading-4 absolute top-2  w-full rounded shadow-md`}
+              } font-medium text-base leading-4 absolute top-2  w-full rounded shadow-md`}
             >
               <li
-                onClick={() => setSelectedText("Arts")}
-                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
+                onClick={() => setSelectedText("Home")}
+                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-sm leading-3 font-medium"
               >
-                Arts
+                Home
               </li>
-              <li
-                onClick={() => setSelectedText("Space")}
-                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
-              >
-                Space
-              </li>
+
               <li className="focus:outline-none">
                 <button
                   onClick={() => setNavDropDown(!navDropDown)}
-                  className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none duration-100 cursor-pointer text-xs leading-3 font-normal w-full flex justify-between items-center"
+                  className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none duration-100 cursor-pointer text-sm leading-3 font-medium w-full flex justify-between items-center"
                 >
-                  <span>mobile</span>
+                  <span>Members</span>
                   <div className="cursor-pointer text-gray-500">
                     <svg
                       id="ArrowSVG"
@@ -214,15 +209,15 @@ const Navigation = () => {
                 <div
                   className={`${
                     navDropDown ? "hidden" : "block"
-                  } transform duration-100 absolute w-full rounded-b-lg shadow-md overflow-hidden z-10 transform  sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2`}
+                  } transform duration-100  w-full overflow-hidden z-10 transform  sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2`}
                 >
-                  <div className="relative grid bg-white">
+                  <div className="relative grid">
                     {solutions.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
                         onClick={() => setNavDropDownText(item.name)}
-                        className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
+                        className="px-4 py-3 text-gray-600 bg-gray-100  focus:outline-none  hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-medium"
                       >
                         <p className="">{item.name}</p>
                       </a>
@@ -231,22 +226,28 @@ const Navigation = () => {
                 </div>
               </li>
               <li
-                onClick={() => setSelectedText("Game")}
-                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
+                onClick={() => setSelectedText("News")}
+                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-sm leading-3 font-medium"
               >
-                Game
+                News
               </li>
               <li
-                onClick={() => setSelectedText("Utility")}
-                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
+                onClick={() => setSelectedText("Event")}
+                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-sm leading-3 font-medium"
               >
-                Utility
+                Event
               </li>
               <li
-                onClick={() => setSelectedText("Cards")}
-                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
+                onClick={() => setSelectedText("About")}
+                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-sm leading-3 font-medium"
               >
-                Cards
+                About
+              </li>
+              <li
+                onClick={() => setSelectedText("Contact")}
+                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-sm leading-3 font-medium"
+              >
+                Contact
               </li>
             </ul>
           </div>
