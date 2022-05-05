@@ -37,7 +37,8 @@ const Navigation = () => {
   };
 
   const setNavDropDownText = (navText) => {
-    setNavDropDown(navText);
+    setText(navText);
+    setNavDropDown(true);
   };
 
   return (
@@ -185,7 +186,7 @@ const Navigation = () => {
               <li className="focus:outline-none">
                 <button
                   onClick={() => setNavDropDown(!navDropDown)}
-                  className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal w-full flex justify-between items-center"
+                  className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none duration-100 cursor-pointer text-xs leading-3 font-normal w-full flex justify-between items-center"
                 >
                   <span>mobile</span>
                   <div className="cursor-pointer text-gray-500">
@@ -220,13 +221,10 @@ const Navigation = () => {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="flex px-8 py-4 items-start rounded-lg hover:bg-gray-50"
+                        onClick={() => setNavDropDownText(item.name)}
+                        className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
                       >
-                        <div className="">
-                          <p className="text-base font-medium text-gray-900">
-                            {item.name}
-                          </p>
-                        </div>
+                        <p className="">{item.name}</p>
                       </a>
                     ))}
                   </div>
