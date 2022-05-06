@@ -48,7 +48,7 @@ const Navigation = () => {
         <nav className="hidden md:block">
           <div className="flex justify-between w-full ">
             <div className="flex justify-start items-center">
-              <h1 className="leading-6 text-gray-800">CSE IEEE</h1>
+              <h1 className="leading-6 text-gray-800">DIU IEEE</h1>
             </div>
             {/* For medium and plus sized devices */}
             <ul className="hidden md:flex flex-auto justify-center">
@@ -135,7 +135,7 @@ const Navigation = () => {
           <div className="flex items-center justify-between space-x-3 lg:pr-16">
             <div className="flex justify-start items-center">
               <h1 className="leading-6 text-gray-800">
-                CSE IEEE <span className="text-sm text-gray-200">{text}</span>
+                DIU IEEE <span className="text-sm text-gray-200">{text}</span>
               </h1>
             </div>
             <div
