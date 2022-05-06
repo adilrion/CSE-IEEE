@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { BsFacebook, BsGithub, BsInstagram, BsPinterest } from "react-icons/bs";
+
 import "./Navigation.css";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 
@@ -43,12 +45,54 @@ const Navigation = () => {
 
   return (
     <div className="bg-white shadow-sm">
-      <div className="px-5 lg:px-44 sm:px-10 sm:px-10">
+      <div className="">
         {/*  for Larger device */}
-        <nav className="hidden md:block">
-          <div className="flex justify-between w-full ">
+        <nav className="hidden md:block navigation">
+          <div className="flex justify-between items-center py-2 bg-gray-100 bg-transparent px-5 lg:px-44 sm:px-10 sm:px-10">
+            <div className="flex gap-10 text-xs text-[#808080]">
+              <div className="location">
+                <p>Dhaka, Bangladesh</p>
+              </div>
+
+              <div className="contact-number">
+                <p>+8801993787377</p>
+              </div>
+              <div className="email">
+                <p>diuieee@gmail.com</p>
+              </div>
+            </div>
+            <div>
+              <div className="flex justify-evenly gap-8 ">
+                <Link
+                  to="#"
+                  className="text-xl text-[#808080] bg  hover:text-[#5a5a5a]  transition ease-in-out duration-300"
+                >
+                  <BsGithub />
+                </Link>
+                <Link
+                  to="#"
+                  className=" text-xl text-[#808080] bg  hover:text-[#3b5998] transition ease-in-out duration-300"
+                >
+                  <BsFacebook />
+                </Link>
+                <Link
+                  to="#"
+                  className="text-xl text-[#808080] bg  hover:text-[#bc2a8d] transition ease-in-out duration-300"
+                >
+                  <BsInstagram />
+                </Link>
+                <Link
+                  to="#"
+                  className=" text-xl text-[#808080] bg  hover:text-[#c8232c] transition ease-in-out duration-300"
+                >
+                  <BsPinterest />
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-between w-full px-5 lg:px-44 sm:px-10 sm:px-10">
             <div className="flex justify-start items-center">
-              <h1 className="leading-6 text-gray-800">DIU IEEE</h1>
+              <h1 className="leading-6 text-5xl text-white">DIU IEEE</h1>
             </div>
             {/* For medium and plus sized devices */}
             <ul className="hidden md:flex flex-auto justify-center">
@@ -62,7 +106,7 @@ const Navigation = () => {
                   />
                 </button>
                 <div className="nav-dropdown-menu rounded-b-lg shadow-md overflow-hidden z-10 transform  sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-                  <div className="relative grid bg-white">
+                  <div className="relative grid">
                     {solutions.map((item) => (
                       <a
                         key={item.name}
@@ -70,7 +114,7 @@ const Navigation = () => {
                         className="flex px-8 py-4 items-start rounded-lg hover:bg-gray-50"
                       >
                         <div className="">
-                          <p className="text-base font-medium text-gray-900">
+                          <p className="text-base font-medium text-white">
                             {item.name}
                           </p>
                         </div>
@@ -95,7 +139,7 @@ const Navigation = () => {
                 >
                   <path
                     d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z"
-                    stroke="#1F2937"
+                    stroke="white"
                     strokeWidth="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -104,37 +148,14 @@ const Navigation = () => {
                 <div className="animate-ping w-1.5 h-1.5 bg-indigo-700 rounded-full absolute -top-1 -right-1 m-auto duration-200" />
                 <div className=" w-1.5 h-1.5 bg-indigo-700 rounded-full absolute -top-1 -right-1 m-auto shadow-lg" />
               </div>
-              <svg
-                className="cursor-pointer  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 "
-                width={24}
-                height={24}
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z"
-                  stroke="#1F2937"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21"
-                  stroke="#1F2937"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
             </div>
           </div>
         </nav>
         {/* for smaller devcies */}
-        <div className="block md:hidden w-full">
+        <div className="block md:hidden w-full px-5 lg:px-44 sm:px-10 sm:px-10">
           <div className="flex items-center justify-between space-x-3 lg:pr-16">
             <div className="flex justify-start items-center">
-              <h1 className="leading-6 text-gray-800">
+              <h1 className="leading-6 text-white">
                 DIU IEEE <span className="text-sm text-gray-200">{text}</span>
               </h1>
             </div>

@@ -1,7 +1,13 @@
+.navigation {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
 .nav-item-name {
   padding: 20px 15px;
   font-weight: 500;
-  color: rgb(86, 86, 86);
+  color: rgb(255, 255, 255);
   transition: 0.5s;
 }
 /* .nav-dropdown-menu:hover .nav-item-name {
@@ -13,6 +19,7 @@
 .nav-dropdown-menu {
   position: absolute;
   display: none;
+  background-color: rgba(0, 0, 0, 0.382);
 }
 
 .nav-dropdown:hover .nav-dropdown-menu {
