@@ -131,6 +131,17 @@ const Committee = () => {
             ))}
           </div>
         </div>
+
+        <div className="mt-9 w-full flex justify-end">
+          <button className="flex justify-between gap-2 items-center text-[#1ecd79] ">
+            <p className="text-xl font-medium leading-5">
+              See More Information
+            </p>
+            <span className="text-2xl">
+              <BsArrowRight />
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   );

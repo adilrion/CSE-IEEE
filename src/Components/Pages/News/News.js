@@ -280,8 +280,8 @@ const News = () => {
           </div>
         </div>
 
-        <div className="mt-12 w-full flex justify-end">
-          <button className="px-4 bg-[#31dc89] flex justify-between items-center w-full lg:w-72 h-14 text-white hover:bg-gray-700">
+        <div className="mt-9 w-full flex justify-end">
+          <button className="flex justify-between gap-2 items-center text-[#1ecd79] ">
             <p className="text-xl font-medium leading-5">See More News</p>
             <span className="text-2xl">
               <BsArrowRight />
