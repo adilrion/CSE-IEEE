@@ -32,6 +32,7 @@ const Navigation = () => {
   const [dropDown, setDropDown] = useState(true);
   const [navDropDown, setNavDropDown] = useState(true);
   const [text, setText] = useState("");
+  const [color, setColor] = useState(false);
 
   const setSelectedText = (txt) => {
     setText(txt);
@@ -43,12 +44,20 @@ const Navigation = () => {
     setNavDropDown(true);
   };
 
+  const changeNavBg = () => {
+    if (window.scrollY >= 80) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+
   return (
-    <div className="bg-white shadow-sm">
+    <div className=" shadow-sm">
       <div className="">
         {/*  for Larger device */}
         <nav className="hidden md:block navigation">
-          <div className="flex justify-between items-center py-2 bg-gray-100 bg-transparent px-5 lg:px-44 sm:px-10 sm:px-10">
+          <div className="flex justify-between items-center py-2 bg-transparent px-5 lg:px-44 sm:px-10 sm:px-10">
             <div className="flex gap-10 text-xs text-[#808080]">
               <div className="location">
                 <p>Dhaka, Bangladesh</p>
@@ -90,9 +99,11 @@ const Navigation = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-between w-full px-5 lg:px-44 sm:px-10 sm:px-10">
+          <div className="flex justify-between w-full px-5 lg:px-44 sm:px-10">
             <div className="flex justify-start items-center">
-              <h1 className="leading-6 text-5xl text-white">DIU IEEE</h1>
+              <h1 className="leading-6 text-5xl text-white">
+                DIU <span className="text-[#31dc89]">IEEE</span>
+              </h1>
             </div>
             {/* For medium and plus sized devices */}
             <ul className="hidden md:flex flex-auto justify-center">
@@ -111,7 +122,7 @@ const Navigation = () => {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="flex px-8 py-4 items-start rounded-lg hover:bg-gray-50"
+                        className="flex px-8 py-4 items-start rounded-lg hover:"
                       >
                         <div className="">
                           <p className="text-base font-medium text-white">
@@ -152,11 +163,12 @@ const Navigation = () => {
           </div>
         </nav>
         {/* for smaller devcies */}
-        <div className="block md:hidden w-full px-5 lg:px-44 sm:px-10 sm:px-10">
-          <div className="flex items-center justify-between space-x-3 lg:pr-16">
+        <div className="block md:hidden bg-[#000000] w-full z-50">
+          <div className="flex items-center justify-between space-x-3 px-5">
             <div className="flex justify-start items-center">
               <h1 className="leading-6 text-white">
-                DIU IEEE <span className="text-sm text-gray-200">{text}</span>
+                DIU <span className="text-[#31dc89]">IEEE</span>
+                <span className="text-sm text-gray-700 ml-3">{text}</span>
               </h1>
             </div>
             <div
@@ -176,7 +188,7 @@ const Navigation = () => {
               >
                 <path
                   d="M6 9L12 15L18 9"
-                  stroke="gray"
+                  stroke="white"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -185,16 +197,16 @@ const Navigation = () => {
             </div>
           </div>
 
-          <div className=" relative">
+          <div className="mobile-nav px-5">
             <ul
               id="list"
               className={`${
                 dropDown ? "hidden" : "block"
-              } font-medium text-base leading-4 absolute top-2  w-full rounded shadow-md`}
+              } font-medium text-base leading-4 w-full rounded shadow-md`}
             >
               <li
                 onClick={() => setSelectedText("Home")}
-                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-sm leading-3 font-medium"
+                className=" focus:outline-none duration-100 cursor-pointer nav-item-name-sm"
               >
                 Home
               </li>
@@ -202,24 +214,24 @@ const Navigation = () => {
               <li className="focus:outline-none">
                 <button
                   onClick={() => setNavDropDown(!navDropDown)}
-                  className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none duration-100 cursor-pointer text-sm leading-3 font-medium w-full flex justify-between items-center"
+                  className="text-white   focus:outline-none duration-100 cursor-pointer text-sm leading-3 font-medium w-full flex justify-between items-center nav-item-name-sm "
                 >
                   <span>Members</span>
-                  <div className="cursor-pointer text-gray-500">
+                  <div className="cursor-pointer text-gray-500 mr-4">
                     <svg
                       id="ArrowSVG"
                       className={`${
                         navDropDown ? "" : "rotate-180 "
                       } transform duration-100`}
-                      width={15}
-                      height={15}
+                      width={24}
+                      height={24}
                       viewBox="0 0 24 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M6 9L12 15L18 9"
-                        stroke="gray"
+                        stroke="white"
                         strokeWidth="1.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -238,7 +250,7 @@ const Navigation = () => {
                         key={item.name}
                         href={item.href}
                         onClick={() => setNavDropDownText(item.name)}
-                        className="px-4 py-3 text-gray-600 bg-gray-100  focus:outline-none  hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-medium"
+                        className="focus:outline-none  duration-100 cursor-pointer nav-item-name-sm "
                       >
                         <p className="">{item.name}</p>
                       </a>
@@ -248,25 +260,25 @@ const Navigation = () => {
               </li>
               <li
                 onClick={() => setSelectedText("News")}
-                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-sm leading-3 font-medium"
+                className="focus:outline-none duration-100 cursor-pointer nav-item-name-sm"
               >
                 News
               </li>
               <li
                 onClick={() => setSelectedText("Event")}
-                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-sm leading-3 font-medium"
+                className="focus:outline-none duration-100 cursor-pointer nav-item-name-sm"
               >
                 Event
               </li>
               <li
                 onClick={() => setSelectedText("About")}
-                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-sm leading-3 font-medium"
+                className="focus:outline-none duration-100 cursor-pointer nav-item-name-sm"
               >
                 About
               </li>
               <li
                 onClick={() => setSelectedText("Contact")}
-                className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-sm leading-3 font-medium"
+                className="focus:outline-none duration-100 cursor-pointer nav-item-name-sm"
               >
                 Contact
               </li>

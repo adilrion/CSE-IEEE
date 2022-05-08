@@ -2,6 +2,7 @@
   position: absolute;
   width: 100%;
   z-index: 1;
+  background-color: transparent;
 }
 
 .nav-item-name {
@@ -9,6 +10,11 @@
   font-weight: 500;
   color: rgb(255, 255, 255);
   transition: 0.5s;
+}
+.nav-item-name-sm {
+  padding: 10px 0px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
 }
 /* .nav-dropdown-menu:hover .nav-item-name {
   transform: scale(1.1);
@@ -19,9 +25,12 @@
 .nav-dropdown-menu {
   position: absolute;
   display: none;
-  background-color: rgba(0, 0, 0, 0.382);
+  background-color: rgba(0, 0, 0, 0.341);
 }
 
 .nav-dropdown:hover .nav-dropdown-menu {
   display: block;
+}
+.mobile-nav {
+  background-color: rgba(0, 0, 0, 0.341);
 }
