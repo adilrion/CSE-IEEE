@@ -56,8 +56,8 @@ const Navigation = () => {
     <div className=" shadow-sm">
       <div className="">
         {/*  for Larger device */}
-        <nav className="hidden md:block navigation">
-          <div className="flex justify-between items-center py-2 bg-transparent px-5 lg:px-44 sm:px-10 sm:px-10">
+        <nav className="hidden md:block navigation ">
+          <div className="flex justify-between bg-[#020305] items-center py-2 bg-transparent px-5 lg:px-44 sm:px-10 sm:px-10">
             <div className="flex gap-10 text-xs text-[#808080]">
               <div className="location">
                 <p>Dhaka, Bangladesh</p>
@@ -99,7 +99,7 @@ const Navigation = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-between w-full px-5 lg:px-44 sm:px-10">
+          <div className="flex justify-between w-full px-5 lg:px-44 sm:px-10 bg-[#020305]">
             <div className="flex justify-start items-center">
               <h1 className="leading-6 text-5xl text-white">
                 DIU <span className="text-[#31dc89]">IEEE</span>
@@ -107,21 +107,26 @@ const Navigation = () => {
             </div>
             {/* For medium and plus sized devices */}
             <ul className="hidden md:flex flex-auto justify-center">
-              <li className="focus:outline-none nav-item-name">Home</li>
+              <li className="focus:outline-none nav-item-name">
+                <Link to="/home">Home</Link>
+              </li>
               <li className="focus:outline-none nav-dropdown ">
-                <button className="inline-flex justify-between items-center  nav-item-name">
+                <Link
+                  to="members"
+                  className="inline-flex justify-between items-center  nav-item-name"
+                >
                   <span>Members</span>
                   <ChevronDownIcon
                     className="ml-1 h-5 w-5 group-hover:text-gray-500"
                     aria-hidden="true"
                   />
-                </button>
+                </Link>
                 <div className="nav-dropdown-menu rounded-b-lg shadow-md overflow-hidden z-10 transform  sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                   <div className="relative grid">
                     {solutions.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className="flex px-8 py-4 items-start rounded-lg hover:"
                       >
                         <div className="">
@@ -129,15 +134,23 @@ const Navigation = () => {
                             {item.name}
                           </p>
                         </div>
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
               </li>
-              <li className="focus:outline-none nav-item-name">News</li>
-              <li className="focus:outline-none nav-item-name">Events</li>
-              <li className="focus:outline-none nav-item-name">About</li>
-              <li className="focus:outline-none nav-item-name">Contact</li>
+              <li className="focus:outline-none nav-item-name">
+                <Link to="/news">News</Link>
+              </li>
+              <li className="focus:outline-none nav-item-name">
+                <Link to="/event">Events</Link>
+              </li>
+              <li className="focus:outline-none nav-item-name">
+                <Link to="/about">About</Link>
+              </li>
+              <li className="focus:outline-none nav-item-name">
+                <Link to="contact">Contact</Link>
+              </li>
             </ul>
             <div className=" flex space-x-5 justify-center items-center pl-2">
               <div className="relative cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 ">
@@ -156,14 +169,14 @@ const Navigation = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <div className="animate-ping w-1.5 h-1.5 bg-indigo-700 rounded-full absolute -top-1 -right-1 m-auto duration-200" />
-                <div className=" w-1.5 h-1.5 bg-indigo-700 rounded-full absolute -top-1 -right-1 m-auto shadow-lg" />
+                <div className="animate-ping w-1.5 h-1.5 bg-[#31dc89] rounded-full absolute -top-1 -right-1 m-auto duration-200" />
+                <div className=" w-1.5 h-1.5 bg-[#31dc89] rounded-full absolute -top-1 -right-1 m-auto shadow-lg" />
               </div>
             </div>
           </div>
         </nav>
         {/* for smaller devcies */}
-        <div className="block md:hidden bg-[#000000] w-full z-50">
+        <div className="block md:hidden bg-[#020305] w-full z-50">
           <div className="flex items-center justify-between space-x-3 px-5">
             <div className="flex justify-start items-center">
               <h1 className="leading-6 text-white">
