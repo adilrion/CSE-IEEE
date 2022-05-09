@@ -3,7 +3,8 @@
   border-radius: 50px;
   height: 55px;
   overflow: hidden;
-  position: relative;
+  display: flex;
+  /* position: relative; */
   max-width: 450px;
   transition: all 0.3s ease 0s;
 }
@@ -14,7 +15,7 @@
   height: 100%;
   left: 0;
   padding: 10px 25px;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   width: calc(100% - 80px);
 
@@ -30,7 +31,7 @@
   border: 0 none;
   font-size: 25px;
   height: 100%;
-  position: absolute;
+  /* position: absolute; */
   right: 0;
   top: 0;
   -webkit-transition: all 0.3s ease 0s;

@@ -94,7 +94,7 @@ const Committee = () => {
                   </div>
                 </div>
                 <div className="px-6 mt-4">
-                  <div className="text-[#525050] font-bold text-3xl text-center pb-1">
+                  <div className="text-[#525050] font-bold text-xl text-center pb-1">
                     {data.name}
                   </div>
                   <p className="text-gray-500 text-sm text-center">
@@ -132,17 +132,14 @@ const Committee = () => {
             ))}
           </div>
         </div>
-
-        <div className="mt-9 w-full flex justify-end">
-          <button className="flex justify-between gap-2 items-center text-[#1ecd79] ">
-            <p className="text-xl font-medium leading-5">
-              See More Information
-            </p>
-            <span className="text-2xl">
-              <BsArrowRight />
-            </span>
-          </button>
-        </div>
+      </div>
+      <div className="w-full flex justify-end px-5 lg:px-44 sm:px-10 mt-7">
+        <button className="flex justify-between gap-2 items-center text-[#1ecd79] ">
+          <p className="text-xl font-medium leading-5">See More Information</p>
+          <span className="text-2xl">
+            <BsArrowRight />
+          </span>
+        </button>
       </div>
     </div>
   );

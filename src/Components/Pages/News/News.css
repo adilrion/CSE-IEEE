@@ -1,0 +1,73 @@
+/* CSS For Recent post page  */
+
+.c-widget {
+  padding: 10px;
+  /*   border-left: 1px solid #ecf0f1;
+  border-right: 1px solid #ecf0f1;
+  border-bottom: 1px solid #ecf0f1; */
+  counter-reset: widget;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0; /* required */
+}
+
+.c-widget__title {
+  text-align: left;
+  /* padding-left: 8px; */
+  margin-bottom: 24px;
+  line-height: 1;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #31dc89;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.c-teaser:first-of-type {
+  padding-top: 0;
+}
+.c-teaser:not(:last-child) {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ecf0f1;
+}
+.c-teaser {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: flex-start;
+  line-height: 1;
+  padding-left: 16px;
+  padding-top: 16px;
+}
+.c-teaser__title {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: initial;
+}
+.c-teaser__title:hover {
+  color: #31dc89;
+}
+.c-teaser__content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.c-teaser__date {
+  line-height: 1;
+  font-size: 12px;
+  color: #5d738d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.c-teaser:before {
+  counter-increment: widget;
+  content: counter(widget) ". ";
+  position: relative;
+  left: -16px;
+  line-height: 1;
+  font-size: 19px;
+  /* font-style: italic; */
+  font-family: "Playfair Display", serif;
+  color: #31dc89;
+}

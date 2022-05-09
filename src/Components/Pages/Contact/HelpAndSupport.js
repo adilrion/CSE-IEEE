@@ -117,10 +117,10 @@ export default function HelpAndSupport() {
   });
 
   return (
-    <div className="w-full px-2 py-16 sm:px-0">
+    <div className="w-full px-2  sm:px-0 bg-gray-100 py-20 ">
       <div className="text-center mb-8">
-        <h1 className="uppercase xl:text-4xl text-3xl text-center text-gray-800 font-extrabold sm:w-4/6 w-5/6 mx-auto">
-          Help & support
+        <h1 className="capitalize text-4xl font-semibold leading-9 text-center text-gray-800">
+          Help & Support
         </h1>
         <p className="text-gray-500 text-lg text-center font-normal">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
@@ -129,8 +129,8 @@ export default function HelpAndSupport() {
         </p>
       </div>
       <Tab.Group>
-        <div className="">
-          <Tab.List className="flex space-x-1  rounded min-h-[80px] help-section mb-5">
+        <div className="px-5 lg:px-44 sm:px-10 sm:px-10 ">
+          <Tab.List className="flex space-x-1  rounded min-h-[80px] shadow-md mb-5 bg-white">
             {Object.keys(categories).map((category) => (
               <Tab
                 key={category}
@@ -153,7 +153,7 @@ export default function HelpAndSupport() {
               <Tab.Panel
                 key={idx}
                 className={classNames(
-                  "rounded bg-[#d3ffeaa3] p-3",
+                  "rounded bg-[#d3ffeaa3] shadow-md p-3",
                   "focus:outline-none "
                 )}
               >

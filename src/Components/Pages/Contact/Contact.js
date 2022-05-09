@@ -8,10 +8,11 @@ import HelpAndSupport from "./HelpAndSupport";
 const Contact = () => {
   return (
     <section>
+      <HelpAndSupport />
       <div className="px-5 lg:px-44 sm:px-10 sm:px-10 py-20 ">
         <div className="text-center mb-8">
-          <h1 className="uppercase xl:text-4xl text-3xl text-center text-gray-800 font-extrabold sm:w-4/6 w-5/6 mx-auto">
-            Drop Massage
+          <h1 className="capitalize text-4xl font-semibold leading-9 text-center text-gray-800">
+            Contact us
           </h1>
           <p className="text-gray-500 text-lg text-center font-normal">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
@@ -115,8 +116,6 @@ const Contact = () => {
             </form>
           </div>
         </div>
-
-        <HelpAndSupport />
       </div>
     </section>
   );
