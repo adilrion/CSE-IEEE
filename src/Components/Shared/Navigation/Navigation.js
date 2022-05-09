@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { BsFacebook, BsGithub, BsInstagram, BsPinterest } from "react-icons/bs";
+import {
+  BsFacebook,
+  BsGithub,
+  BsInstagram,
+  BsPinterest,
+  BsPhone,
+} from "react-icons/bs";
+import { BsEnvelope } from "react-icons/bs";
+import { MdOutlineLocationOn } from "react-icons/md";
 
 import "./Navigation.css";
 import { ChevronDownIcon } from "@heroicons/react/solid";
@@ -60,14 +68,23 @@ const Navigation = () => {
           <div className="flex justify-between bg-[#020305] items-center py-2 px-5 lg:px-44 sm:px-10 sm:px-10">
             <div className="flex gap-10 text-xs text-[#808080]">
               <div className="location">
-                <p>Dhaka, Bangladesh</p>
+                <p className="inline-flex gap-1 justify-center items-center">
+                  <MdOutlineLocationOn />
+                  Dhaka, Bangladesh
+                </p>
               </div>
 
               <div className="contact-number">
-                <p>+8801993787377</p>
+                <p className="inline-flex gap-1 justify-center items-center">
+                  <BsPhone /> +8801993787377
+                </p>
               </div>
               <div className="email">
-                <p>diuieee@gmail.com</p>
+                <p className="inline-flex gap-1 justify-center items-center">
+                  {" "}
+                  <BsEnvelope />
+                  diuieee@gmail.com
+                </p>
               </div>
             </div>
             <div>
@@ -121,7 +138,7 @@ const Navigation = () => {
                     aria-hidden="true"
                   />
                 </Link>
-                <div className="nav-dropdown-menu rounded-b-lg shadow-md overflow-hidden z-10 transform  sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                {/* <div className="nav-dropdown-menu rounded-b-lg shadow-md overflow-hidden z-10 transform  sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                   <div className="relative grid">
                     {solutions.map((item) => (
                       <Link
@@ -137,7 +154,7 @@ const Navigation = () => {
                       </Link>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </li>
               <li className="focus:outline-none nav-item-name">
                 <Link to="/news">News</Link>
@@ -221,11 +238,12 @@ const Navigation = () => {
                 onClick={() => setSelectedText("Home")}
                 className=" focus:outline-none duration-100 cursor-pointer nav-item-name-sm"
               >
-                Home
+                <Link to="/home">Home</Link>
               </li>
 
               <li className="focus:outline-none">
-                <button
+                <Link
+                  to="/members"
                   onClick={() => setNavDropDown(!navDropDown)}
                   className="text-white   focus:outline-none duration-100 cursor-pointer text-sm leading-3 font-medium w-full flex justify-between items-center nav-item-name-sm "
                 >
@@ -251,8 +269,8 @@ const Navigation = () => {
                       />
                     </svg>
                   </div>
-                </button>
-                <div
+                </Link>
+                {/* <div
                   className={`${
                     navDropDown ? "hidden" : "block"
                   } transform duration-100  w-full overflow-hidden z-10 transform  sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2`}
@@ -269,31 +287,31 @@ const Navigation = () => {
                       </a>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </li>
               <li
                 onClick={() => setSelectedText("News")}
                 className="focus:outline-none duration-100 cursor-pointer nav-item-name-sm"
               >
-                News
+                <Link to="/news">News</Link>
               </li>
               <li
                 onClick={() => setSelectedText("Event")}
                 className="focus:outline-none duration-100 cursor-pointer nav-item-name-sm"
               >
-                Event
+                <Link to="/event">Event</Link>
               </li>
               <li
                 onClick={() => setSelectedText("About")}
                 className="focus:outline-none duration-100 cursor-pointer nav-item-name-sm"
               >
-                About
+                <Link to="/about">About</Link>
               </li>
               <li
                 onClick={() => setSelectedText("Contact")}
                 className="focus:outline-none duration-100 cursor-pointer nav-item-name-sm"
               >
-                Contact
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
           </div>

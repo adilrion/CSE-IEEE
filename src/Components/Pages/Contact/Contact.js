@@ -1,8 +1,9 @@
 import React from "react";
 import "./Contact.css";
-import { ImLocation2, ImMail3, ImPhone } from "react-icons/im";
+import { ImPhone } from "react-icons/im";
 import { BsEnvelope } from "react-icons/bs";
 import { RiSendPlaneLine } from "react-icons/ri";
+import { MdOutlineLocationOn } from "react-icons/md";
 import HelpAndSupport from "./HelpAndSupport";
 
 const Contact = () => {
@@ -24,7 +25,7 @@ const Contact = () => {
           <div className="col-span-1 flex flex-col gap-3">
             <div className="c-address">
               <p className="c-address-icon">
-                <ImLocation2 />
+                <MdOutlineLocationOn />
               </p>
               <div className="c-address-details">
                 <h3>Address</h3>

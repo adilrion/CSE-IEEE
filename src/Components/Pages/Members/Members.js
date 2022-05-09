@@ -1,10 +1,11 @@
 import React from "react";
+import Committee from "../Committee/Committee";
 
 const Members = () => {
   return (
-    <div>
-      <h1>Members</h1>
-    </div>
+    <section>
+      <Committee />
+    </section>
   );
 };
 

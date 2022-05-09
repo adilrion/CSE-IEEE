@@ -6,6 +6,7 @@ import Footer from "./Components/Shared/Footer/Footer";
 import News from "./Components/Pages/News/News";
 
 import Navigation from "./Components/Shared/Navigation/Navigation";
+import Members from "./Components/Pages/Members/Members";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="news" element={<News />} />
+          <Route path="members" element={<Members />} />
         </Routes>
         <Footer />
       </BrowserRouter>

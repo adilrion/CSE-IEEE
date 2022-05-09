@@ -4,12 +4,25 @@ import Committee from "../Committee/Committee";
 import Contact from "../Contact/Contact";
 import LatestNews from "../News/LatestNews";
 import { BsArrowRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <>
       <Banner></Banner>
-      <Committee />
+      <div>
+        <Committee />
+        <div className="w-full flex justify-end px-5 lg:px-44 sm:px-10 mt-7">
+          <button className="flex justify-between gap-2 items-center text-[#1ecd79] ">
+            <p className="text-xl font-medium leading-5">
+              See More Information
+            </p>
+            <span className="text-2xl">
+              <BsArrowRight />
+            </span>
+          </button>
+        </div>
+      </div>
       <div className="2xl:mx-auto 2xl:container lg:px-44 lg:py-16 md:py-12 md:px-6 py-9 px-4">
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-4xl font-semibold leading-9 text-center text-gray-800">
@@ -22,12 +35,15 @@ const Home = () => {
         </div>
         <LatestNews />
         <div className="mt-7 w-full flex justify-end">
-          <button className="flex justify-between gap-2 items-center text-[#1ecd79] ">
+          <Link
+            to="/news"
+            className="flex justify-between gap-2 items-center text-[#1ecd79] "
+          >
             <p className="text-xl font-medium leading-5">See More News</p>
             <span className="text-2xl">
               <BsArrowRight />
             </span>
-          </button>
+          </Link>
         </div>
       </div>
       {/* <HelpAndSupport /> */}
