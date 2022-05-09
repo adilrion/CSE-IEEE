@@ -1,13 +1,25 @@
 import React from "react";
 import "./Contact.css";
 import { ImLocation2, ImMail3, ImPhone } from "react-icons/im";
+import { BsEnvelope } from "react-icons/bs";
 import { RiSendPlaneLine } from "react-icons/ri";
+import HelpAndSupport from "./HelpAndSupport";
 
 const Contact = () => {
   return (
     <section>
-      <div className="px-5 lg:px-44 sm:px-10 sm:px-10 py-20">
-        <div className="grid grid-cols-2">
+      <div className="px-5 lg:px-44 sm:px-10 sm:px-10 py-20 ">
+        <div className="text-center mb-8">
+          <h1 className="uppercase xl:text-4xl text-3xl text-center text-gray-800 font-extrabold sm:w-4/6 w-5/6 mx-auto">
+            Drop Massage
+          </h1>
+          <p className="text-gray-500 text-lg text-center font-normal">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+            beatae <br /> sint tempore in laboriosam eos autem delectus, error
+            aperiam illo!
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 ">
           <div className="col-span-1 flex flex-col gap-3">
             <div className="c-address">
               <p className="c-address-icon">
@@ -34,7 +46,7 @@ const Contact = () => {
             </div>
             <div className="c-address">
               <p className="c-address-icon">
-                <ImMail3 />
+                <BsEnvelope />
               </p>
               <div className="c-address-details">
                 <h3>Email</h3>
@@ -103,6 +115,8 @@ const Contact = () => {
             </form>
           </div>
         </div>
+
+        <HelpAndSupport />
       </div>
     </section>
   );

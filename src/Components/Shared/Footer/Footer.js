@@ -4,7 +4,7 @@ import { BsFacebook, BsGithub, BsInstagram, BsPinterest } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <div className="mx-auto container px-5 lg:px-44 sm:px-10 sm:px-10 py-10 border-t border-gray-100">
+    <div className="mx-auto container px-5 lg:px-44 sm:px-10 sm:px-10 py-10 border-t border-gray-100 bg-gray-100">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-4">
         <div className="flex flex-col flex-shrink-0">
           <div>

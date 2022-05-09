@@ -6,6 +6,7 @@ import {
   BsInstagram,
   BsPinterest,
   BsArrowRight,
+  BsEnvelope,
 } from "react-icons/bs";
 
 const committee = [
@@ -123,7 +124,7 @@ const Committee = () => {
                       to="#"
                       className=" text-xl text-[#808080]  hover:text-[#c8232c] transition ease-in-out duration-300"
                     >
-                      <BsPinterest />
+                      <BsEnvelope />
                     </Link>
                   </div>
                 </div>
