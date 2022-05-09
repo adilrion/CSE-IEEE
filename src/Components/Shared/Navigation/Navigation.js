@@ -57,7 +57,7 @@ const Navigation = () => {
       <div className="">
         {/*  for Larger device */}
         <nav className="hidden md:block navigation ">
-          <div className="flex justify-between bg-[#020305] items-center py-2 bg-transparent px-5 lg:px-44 sm:px-10 sm:px-10">
+          <div className="flex justify-between bg-[#020305] items-center py-2 px-5 lg:px-44 sm:px-10 sm:px-10">
             <div className="flex gap-10 text-xs text-[#808080]">
               <div className="location">
                 <p>Dhaka, Bangladesh</p>
