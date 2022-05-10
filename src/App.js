@@ -7,6 +7,7 @@ import News from "./Components/Pages/News/News";
 
 import Navigation from "./Components/Shared/Navigation/Navigation";
 import Members from "./Components/Pages/Members/Members";
+import Event from "./Components/Pages/Events/Event";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="news" element={<News />} />
           <Route path="members" element={<Members />} />
+          <Route path="event" element={<Event />} />
         </Routes>
         <Footer />
       </BrowserRouter>
